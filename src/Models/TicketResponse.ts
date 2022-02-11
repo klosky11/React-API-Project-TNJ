@@ -11,6 +11,7 @@ export interface Events {
     images: Images[]
     dates: Dates
     _embedded: Embedded
+    classifications: Classifications[]
    
 }
 
@@ -35,13 +36,16 @@ export interface Start {
 }
 
 export interface Embedded {
-    attractions: Attractions[]
-}
-
-export interface Attractions {
+    venues: Venues[]
     
 }
 
-export interface Classifications {
+export interface Venues {
+    name: string;
+    city:{name: string};
+    state:{stateCode:string};
+}
 
+export interface Classifications {
+   segment:{name:string};
 }
