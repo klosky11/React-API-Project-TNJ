@@ -1,0 +1,16 @@
+
+
+header {
+    height: 300px;
+    border-bottom: 2px solid black;
+    background-image: url("../../public/placeholder-Topographic-map.jpg");
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+nav a{
+    margin-right: 15px;
+    
+    
+}
