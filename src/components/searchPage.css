@@ -1,0 +1,23 @@
+.map-div {
+    height: 300px;
+    border-bottom: 2px solid black;
+    background-image: url("../../public/placeholder-Topographic-map.jpg");
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 25px;
+    width: 390px;
+    color: #45474a;
+    opacity: 1;
+    font-weight: 700;
+    font-family: 'Courgette', cursive;
+    padding: 5px;
+}

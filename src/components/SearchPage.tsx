@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./searchPage.css"
 
 export function SearchPage() {
   const [searchForm, setSearchForm] = useState({
@@ -8,8 +9,13 @@ export function SearchPage() {
   });
 
   return (
-    <div>
-      <input type="text" value={searchForm.searchTerm}></input>
+    <div className="main">
+       <div className="map-div"></div>
+      {/* just some placeholder text and background for now */}
+      <h1>Plan your getaway and your play</h1>
+      <div className="inputs">
+      <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input>
+      <input type="search" placeholder="Arrival date-Departured date"></input>
       <select>
         <option value={1}>Jan</option>
         <option value={2}>Feb</option>
@@ -24,6 +30,7 @@ export function SearchPage() {
         <option value={11}>Nov</option>
         <option value={12}>Dec</option>
       </select>
+      </div>
     </div>
   );
 }

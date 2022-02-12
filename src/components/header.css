@@ -1,14 +1,27 @@
 
 
 header {
-    height: 300px;
+    display: flex;
+    justify-content: space-between;
     border-bottom: 2px solid black;
-    background-image: url("../../public/placeholder-Topographic-map.jpg");
-    font-size: 3em;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
+    height:50px;
+    font-family: 'Permanent Marker', cursive;
+   
 }
 
+header div {
+    margin: 0px 10px;
+}
+
+
+
+header button{
+    background-image: url("../../public/outline_menu_black_24dp.png");
+    width: 25px;
+    height: 30px;
+    border: none;
+    background-color: white;
+}
 nav a{
     margin-right: 15px;
     

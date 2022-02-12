@@ -8,15 +8,18 @@ import { SearchPage } from './components/SearchPage';
 import { SavedTrips } from './components/SavedTrips';
 import { SpontaneousTrip } from './components/SpontaneousTrip';
 import { Header } from './components/Header';
+import { TripResult } from './components/TripResult';
 
 ReactDOM.render(
   <React.StrictMode>
    <BrowserRouter>
     <Header />
+    <App></App>
       <Routes>
         <Route path="/" element={<SearchPage />} />
         <Route path="/saved/:id" element={<SavedTrips />} />
         <Route path="/spontaneous" element={<SpontaneousTrip />} />
+        <Route path="/results" element={<TripResult />} />
         
       </Routes>
     </BrowserRouter>

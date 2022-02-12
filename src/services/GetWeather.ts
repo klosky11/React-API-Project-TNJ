@@ -10,3 +10,4 @@ export function getWeather(city: string, startDate: string, endDate: string) {
       return response.data;
     });
 }
+
