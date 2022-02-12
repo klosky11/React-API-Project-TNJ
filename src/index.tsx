@@ -14,7 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
    <BrowserRouter>
     <Header />
-    <App></App>
+    
       <Routes>
         <Route path="/" element={<SearchPage />} />
         <Route path="/saved/:id" element={<SavedTrips />} />

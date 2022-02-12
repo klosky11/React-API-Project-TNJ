@@ -4,7 +4,7 @@
     background-image: url("../../public/placeholder-Topographic-map.jpg");
 }
 
-.inputs {
+form {
     display: flex;
     flex-direction: column;
 

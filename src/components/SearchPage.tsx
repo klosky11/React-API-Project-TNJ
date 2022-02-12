@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./searchPage.css"
 
 export function SearchPage() {
@@ -8,14 +9,34 @@ export function SearchPage() {
     endDate: "",
   });
 
+  const [destination, setDestination] = useState("")
+  const [arrivalDate, setArrivalDate] = useState("")
+  const [departureDate, setDepartureDate] = useState("")
+
+  const navigate = useNavigate()
+
+  function onSubmit(){
+      navigate(`/?result=${destination}&`)
+
+  }
+
+
   return (
     <div className="main">
        <div className="map-div"></div>
       {/* just some placeholder text and background for now */}
       <h1>Plan your getaway and your play</h1>
-      <div className="inputs">
-      <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input>
-      <input type="search" placeholder="Arrival date-Departured date"></input>
+      
+      {/* <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input> */}
+
+    <form>
+      <input type="search" placeholder="Where to?" value={destination} onChange={(e) => setDestination(e.target.value) }></input>
+      <input type="search" placeholder="Arrival date YYYY-MM-DD" value={arrivalDate} onChange={(e) => setArrivalDate(e.target.value)}></input>
+      <input type="search" placeholder="Departured date YYYY-MM-DD" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}></input>
+      <button onClick={(e) => 
+      {onSubmit()
+      e.preventDefault()}}>Search</button>
+      </form>
       <select>
         <option value={1}>Jan</option>
         <option value={2}>Feb</option>
@@ -30,7 +51,7 @@ export function SearchPage() {
         <option value={11}>Nov</option>
         <option value={12}>Dec</option>
       </select>
-      </div>
+     
     </div>
   );
 }
