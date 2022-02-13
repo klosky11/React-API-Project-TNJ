@@ -13,7 +13,14 @@ export function SearchPage() {
   const [arrivalDate, setArrivalDate] = useState("");
   const [departureDate, setDepartureDate] = useState("");
 
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+  const navigate = useNavigate()
+
+  function submitHandler(){
+      navigate(`/?result=${destination}&`)
+>>>>>>> 70b3abc3156f924fd103a16488a92b625ab6fffd
 
   function onSubmit() {
     navigate(`/?result=${destination}&`);
@@ -27,6 +34,7 @@ export function SearchPage() {
 
       {/* <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input> */}
 
+<<<<<<< HEAD
       <form>
         <input
           type="search"
@@ -54,6 +62,15 @@ export function SearchPage() {
         >
           Search
         </button>
+=======
+    <form>
+      <input type="search" placeholder="Where to?" value={destination} onChange={(e) => setDestination(e.target.value) }></input>
+      <input type="search" placeholder="Arrival date YYYY-MM-DD" value={arrivalDate} onChange={(e) => setArrivalDate(e.target.value)}></input>
+      <input type="search" placeholder="Departured date YYYY-MM-DD" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}></input>
+      <button onClick={(e) => 
+      {submitHandler()
+      e.preventDefault()}}>Search</button>
+>>>>>>> 70b3abc3156f924fd103a16488a92b625ab6fffd
       </form>
       <select>
         <option value={1}>Jan</option>

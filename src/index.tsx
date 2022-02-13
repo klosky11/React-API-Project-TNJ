@@ -17,8 +17,9 @@ ReactDOM.render(
     
       <Routes>
         <Route path="/" element={<SearchPage />} />
+        <Route path="/home" element={<SearchPage />} />
         <Route path="/saved/:id" element={<SavedTrips />} />
-        <Route path="/spontaneous" element={<SpontaneousTrip />} />
+        <Route path="/results/spontaneous" element={<SpontaneousTrip />} />
         <Route path="/results" element={<TripResult />} />
         
       </Routes>
