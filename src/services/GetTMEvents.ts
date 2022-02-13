@@ -1,9 +1,22 @@
 import axios from "axios";
+import { TicketResponse } from "../Models/TicketResponse";
 
-export function getTMEvents(city: string, startDate: string, endDate: string) {
+export function getTMEvents(
+  city: string,
+  startDate: string,
+  endDate: string
+): Promise<TicketResponse> {
   return axios
-    .get(
-      `https://app.ticketmaster.com/discovery/v2/events.json?city=${city}&startDateTime=${startDate}T00:00:00Z&endDateTime=${endDate}T00:00:00Z&apikey=${process.env.REACT_APP_TMAPI_KEY}`
+    .get<TicketResponse>(
+      `https://app.ticketmaster.com/discovery/v2/events.json`,
+      {
+        params: {
+          city: city,
+          startDate: `${startDate}T00:00:00Z`,
+          endDate: `${endDate}T00:00:00Z`,
+          apikey: process.env.REACT_APP_TMAPI_KEY,
+        },
+      }
     )
     .then((reponse) => reponse.data);
 }

@@ -1,16 +1,11 @@
 import { FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./searchPage.css";
 import { TripResult } from "./TripResult";
 
 export function SearchPage() {
-  const [searchForm, setSearchForm] = useState({
-    searchTerm: "",
-    startDate: "",
-    endDate: "",
-  });
-
+  const [searchParams, setSearchParams] = useSearchParams();
   const [destination, setDestination] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
   const [departureDate, setDepartureDate] = useState("");
@@ -23,6 +18,7 @@ export function SearchPage() {
     queryStringParams.destination = destination;
     queryStringParams.arrivalDate = arrivalDate;
     queryStringParams.departureDate = departureDate;
+    setSearchParams(new URLSearchParams(queryStringParams));
     navigate(
       `/tripResult?` + new URLSearchParams(queryStringParams).toString()
     );

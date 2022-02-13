@@ -8,40 +8,29 @@ import { WeatherResult } from "./WeatherResult";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState([]);
-  const [tripResultsEvents, setTripResultsEvents] =
-    useState<TicketResponse | null>(null);
+  const [tripResultsEvents, setTripResultsEvents] = useState<
+    TicketResponse | undefined
+  >();
 
-  const [searchParams] = useSearchParams();
-
-  //   if (searchParams.get("destination")) {
-  //     const city = searchParams.get("destination");
-  //   }
-  //   if (searchParams.get("arrivalDate")) {
-  //     const startDate = searchParams.get("arrivalDate");
-  //     console.log(startDate);
-  //   }
-  //   if (searchParams.get("departureDate")) {
-  //     const endDate = searchParams.get("departureDate");
-  //     console.log(endDate);
-  //   }
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    getWeather(
-      searchParams.get("destination")!,
-      searchParams.get("arrivalDate")!,
-      searchParams.get("departureDate")!
-    ).then((data) => setTripResultsWeather(data));
-    getTMEvents(
-      searchParams.get("destination")!,
-      searchParams.get("arrivalDate")!,
-      searchParams.get("departureDate")!
-    ).then((data) => setTripResultsEvents(data));
-  }, []);
-  console.log(tripResultsEvents);
-  console.log(tripResultsWeather);
+    const destination = searchParams.get("destination");
+    const arrivalDate = searchParams.get("arrivalDate");
+    const departureDate = searchParams.get("departureDate");
+    if (destination && arrivalDate && departureDate) {
+      getWeather(destination, arrivalDate, departureDate).then((data) =>
+        setTripResultsWeather(data)
+      );
+      getTMEvents(destination, arrivalDate, departureDate).then((data) =>
+        setTripResultsEvents(data)
+      );
+    }
+  }, [searchParams]);
+
   return (
     <div>
-      <EventResults events={tripResultsEvents!} />
+      <EventResults events={tripResultsEvents} />
     </div>
   );
 }
