@@ -13,17 +13,17 @@ export function TripResult() {
 
   const [searchParams] = useSearchParams();
 
-  if (searchParams.get("destination")) {
-    const city = searchParams.get("destination");
-  }
-  if (searchParams.get("arrivalDate")) {
-    const startDate = searchParams.get("arrivalDate");
-    console.log(startDate);
-  }
-  if (searchParams.get("departureDate")) {
-    const endDate = searchParams.get("departureDate");
-    console.log(endDate);
-  }
+  //   if (searchParams.get("destination")) {
+  //     const city = searchParams.get("destination");
+  //   }
+  //   if (searchParams.get("arrivalDate")) {
+  //     const startDate = searchParams.get("arrivalDate");
+  //     console.log(startDate);
+  //   }
+  //   if (searchParams.get("departureDate")) {
+  //     const endDate = searchParams.get("departureDate");
+  //     console.log(endDate);
+  //   }
 
   useEffect(() => {
     getWeather(
@@ -41,7 +41,7 @@ export function TripResult() {
   console.log(tripResultsWeather);
   return (
     <div>
-      <EventResults events={tripResultsEvents!._embedded.events} />
+      <EventResults events={tripResultsEvents!} />
     </div>
   );
 }

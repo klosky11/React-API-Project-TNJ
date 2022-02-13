@@ -15,7 +15,7 @@ export interface Event {
   name: string;
   id: string;
   url: string;
-  images: Images[];
+  images?: Images[];
   dates: Dates;
   _embedded: Embedded;
   classifications: Classifications[];
