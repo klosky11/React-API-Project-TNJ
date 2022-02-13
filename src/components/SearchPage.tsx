@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./searchPage.css";
+import { TripResult } from "./TripResult";
 
 export function SearchPage() {
   const [searchForm, setSearchForm] = useState({
@@ -16,9 +18,6 @@ export function SearchPage() {
   const navigate = useNavigate();
 
   function submitHandler() {
-    navigate(`/?result=${destination}&`);
-  }
-  function onSubmit() {
     navigate(`/?result=${destination}&`);
   }
 
@@ -49,29 +48,11 @@ export function SearchPage() {
           value={departureDate}
           onChange={(e) => setDepartureDate(e.target.value)}
         ></input>
-        <button
-          onClick={(e) => {
-            onSubmit();
-            e.preventDefault();
-          }}
-        >
-          Search
-        </button>
+        <Link to="/tripResult/" onClick={submitHandler}>
+          {" "}
+          Plan Trip
+        </Link>
       </form>
-      <select>
-        <option value={1}>Jan</option>
-        <option value={2}>Feb</option>
-        <option value={3}>Mar</option>
-        <option value={4}>Apr</option>
-        <option value={5}>May</option>
-        <option value={6}>Jun</option>
-        <option value={7}>Jul</option>
-        <option value={8}>Aug</option>
-        <option value={9}>Sep</option>
-        <option value={10}>Oct</option>
-        <option value={11}>Nov</option>
-        <option value={12}>Dec</option>
-      </select>
     </div>
   );
 }
