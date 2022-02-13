@@ -15,7 +15,7 @@ export function SearchPage() {
 
   const navigate = useNavigate()
 
-  function onSubmit(){
+  function submitHandler(){
       navigate(`/?result=${destination}&`)
 
   }
@@ -34,7 +34,7 @@ export function SearchPage() {
       <input type="search" placeholder="Arrival date YYYY-MM-DD" value={arrivalDate} onChange={(e) => setArrivalDate(e.target.value)}></input>
       <input type="search" placeholder="Departured date YYYY-MM-DD" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}></input>
       <button onClick={(e) => 
-      {onSubmit()
+      {submitHandler()
       e.preventDefault()}}>Search</button>
       </form>
       <select>
