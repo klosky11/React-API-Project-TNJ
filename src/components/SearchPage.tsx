@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./searchPage.css";
@@ -17,8 +17,15 @@ export function SearchPage() {
 
   const navigate = useNavigate();
 
-  function submitHandler() {
-    navigate(`/?result=${destination}&`);
+  function submitHandler(e: FormEvent) {
+    e.preventDefault();
+    const queryStringParams: any = {};
+    queryStringParams.destination = destination;
+    queryStringParams.arrivalDate = arrivalDate;
+    queryStringParams.departureDate = departureDate;
+    navigate(
+      `/tripResult?` + new URLSearchParams(queryStringParams).toString()
+    );
   }
 
   return (
@@ -29,7 +36,7 @@ export function SearchPage() {
 
       {/* <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input> */}
 
-      <form>
+      <form onSubmit={submitHandler}>
         <input
           type="search"
           placeholder="Where to?"
@@ -48,10 +55,7 @@ export function SearchPage() {
           value={departureDate}
           onChange={(e) => setDepartureDate(e.target.value)}
         ></input>
-        <Link to="/tripResult/" onClick={submitHandler}>
-          {" "}
-          Plan Trip
-        </Link>
+        <button type="submit">Plan Trip</button>
       </form>
     </div>
   );

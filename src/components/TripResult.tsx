@@ -24,5 +24,5 @@ export function TripResult(props: {
   }, []);
   console.log(tripResultsEvents);
   console.log(tripResultsWeather);
-  return <div></div>;
+  return <div>test</div>;
 }
