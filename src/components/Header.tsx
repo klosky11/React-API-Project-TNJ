@@ -6,6 +6,10 @@ import { Menu } from "./Menu";
 export function Header() {
   const [show, setShow] = useState(false);
 
+  const toggleClass(){
+    return
+  }
+
   return (
     <div>
       <header className="main-header">
