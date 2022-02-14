@@ -13,10 +13,10 @@ export function SearchPage() {
   const [arrivalDate, setArrivalDate] = useState("");
   const [departureDate, setDepartureDate] = useState("");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  function submitHandler() {
-    navigate(`/?result=${destination}&`);
+  function submitHandler(){
+      navigate(`/?result=${destination}&`)
   }
   function onSubmit() {
     navigate(`/?result=${destination}&`);
@@ -75,3 +75,4 @@ export function SearchPage() {
     </div>
   );
 }
+
