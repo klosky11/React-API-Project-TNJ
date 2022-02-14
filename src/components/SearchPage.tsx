@@ -28,31 +28,35 @@ export function SearchPage() {
     <div className="main">
       <div className="map-div"></div>
       {/* just some placeholder text and background for now */}
-      <h1>Plan your getaway and your play</h1>
+      <h1 className="main-paragraph">
+        Turn your trip into an <span className="adventure">adventure.</span>
+      </h1>
 
       {/* <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input> */}
-
-      <form onSubmit={submitHandler}>
-        <input
-          type="search"
-          placeholder="Where to?"
-          value={destination}
-          onChange={(e) => setDestination(e.target.value)}
-        ></input>
-        <input
-          type="date"
-          placeholder="Arrival date YYYY-MM-DD"
-          value={arrivalDate}
-          onChange={(e) => setArrivalDate(e.target.value)}
-        ></input>
-        <input
-          type="date"
-          placeholder="Departured date YYYY-MM-DD"
-          value={departureDate}
-          onChange={(e) => setDepartureDate(e.target.value)}
-        ></input>
-        <button type="submit">Plan Trip</button>
-      </form>
+      <div className="form-container">
+        <form onSubmit={submitHandler}>
+          <input
+            className="where-to"
+            type="search"
+            placeholder="Where to?"
+            value={destination}
+            onChange={(e) => setDestination(e.target.value)}
+          ></input>
+          <input
+            type="date"
+            placeholder="Arrival date YYYY-MM-DD"
+            value={arrivalDate}
+            onChange={(e) => setArrivalDate(e.target.value)}
+          ></input>
+          <input
+            type="date"
+            placeholder="Departured date YYYY-MM-DD"
+            value={departureDate}
+            onChange={(e) => setDepartureDate(e.target.value)}
+          ></input>
+          <button type="submit">Find Events</button>
+        </form>
+      </div>
     </div>
   );
 }
