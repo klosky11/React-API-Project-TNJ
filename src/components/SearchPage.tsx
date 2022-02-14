@@ -10,15 +10,8 @@ export function SearchPage() {
   const [arrivalDate, setArrivalDate] = useState("");
   const [departureDate, setDepartureDate] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-<<<<<<< HEAD
-  function submitHandler(){
-      navigate(`/?result=${destination}&`)
-  }
-  function onSubmit() {
-    navigate(`/?result=${destination}&`);
-=======
   function submitHandler(e: FormEvent) {
     e.preventDefault();
     const queryStringParams: any = {};
@@ -29,7 +22,6 @@ export function SearchPage() {
     navigate(
       `/tripResult?` + new URLSearchParams(queryStringParams).toString()
     );
->>>>>>> c0939ea1884f776f6cca2ad012ca8b2b9b108f98
   }
 
   return (
@@ -68,4 +60,3 @@ export function SearchPage() {
     </div>
   );
 }
-
