@@ -9,15 +9,12 @@ export function Header() {
   return (
     <div>
       <header className="main-header">
+        <div className="logo">Uncharted Events </div>
         <button className="menu-mobile" onClick={() => setShow(true)}></button>
         <div className="links" style={{ display: show ? "block" : "none" }}>
           <Menu></Menu>
         </div>
-        <div className="site-name"> Site Name</div>
-        <div className="logo"> LOGO </div>
       </header>
-
-     
     </div>
   );
 }

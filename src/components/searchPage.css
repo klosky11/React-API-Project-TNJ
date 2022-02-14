@@ -1,24 +1,89 @@
-.map-div {
-    height: 300px;
-    border-bottom: 2px solid black;
-    background-image: url("../../public/placeholder-Topographic-map.jpg");
+/* .main {
+  background-image: url("../../public/placeholder-Topographic-map.jpg");
+  height: 100vh;
+} */
+
+/* .map-div {
+  background-image: url("../../public/");
+  height: 500px;
+  width: 100%;
+} */
+
+input {
+  height: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-family: "Rock Salt", cursive;
+  height: 61px;
+  border: none;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: blue;
+  color: black;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 80px;
 }
 
+.where-to {
+  height: 40px;
+}
 
-h1 {
-    margin-bottom: 50px;
-    font-size: 25px;
-    width: 390px;
-    color: #45474a;
-    opacity: 1;
-    font-weight: 700;
-    font-family: 'Courgette', cursive;
-    padding: 5px;
+.main-paragraph {
+  margin-bottom: 50px;
+  font-size: 40px;
+  width: 390px;
+  color: #45474a;
+  opacity: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.adventure {
+  text-decoration: underline black 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  input {
+    width: 300px;
+    height: 55px;
+  }
+
+  .where-to {
+    height: 59px;
+  }
+
+  button {
+    width: 300px;
+    height: 58px;
+  }
+
+  .main-paragraph {
+    font-size: 50px;
+    margin-left: 50px;
+  }
 }
