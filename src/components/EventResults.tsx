@@ -4,7 +4,7 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { EventResultsList } from "./EventResultList";
 import "./eventResults.css";
 
-export function EventResults(props: { events?: TicketResponse }) {
+export function EventResults(props: { events?: Event[] }) {
   return (
     <div>
       <h1 className="events-header">
@@ -12,9 +12,10 @@ export function EventResults(props: { events?: TicketResponse }) {
         Events happening close to your destination :
       </h1>
 
-      <h2>{props.events?._embedded.events[0].name}</h2>
-      <p>{props.events?._embedded.events[0].dates.start.localDate}</p>
-      <p>{props.events?._embedded.events[0].url}</p>
+      <ul>
+      {props.events?.map(item => <li key={item.id} > <EventResultsList event={item}></EventResultsList></li>)}
+    
+      </ul>
     </div>
   );
 }

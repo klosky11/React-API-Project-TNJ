@@ -7,7 +7,7 @@ import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
 
 export function TripResult() {
-  const [tripResultsWeather, setTripResultsWeather] = useState([]);
+  const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
   const [tripResultsEvents, setTripResultsEvents] = useState<
     TicketResponse | undefined
   >();
@@ -19,8 +19,9 @@ export function TripResult() {
     const arrivalDate = searchParams.get("arrivalDate");
     const departureDate = searchParams.get("departureDate");
     if (destination && arrivalDate && departureDate) {
-      getWeather(destination, arrivalDate, departureDate).then((data) =>
-        setTripResultsWeather(data)
+      getWeather(destination, arrivalDate, departureDate).then((data) =>{
+        console.log(data)
+         setTripResultsWeather(data)}
       );
       getTMEvents(destination, arrivalDate, departureDate).then((data) =>
         setTripResultsEvents(data)
@@ -30,7 +31,8 @@ export function TripResult() {
 
   return (
     <div>
-      <EventResults events={tripResultsEvents} />
+      <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
+      <EventResults events={tripResultsEvents?._embedded.events} />
     </div>
   );
 }

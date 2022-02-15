@@ -12,8 +12,8 @@ export function getTMEvents(
       {
         params: {
           city: city,
-          startDate: `${startDate}T00:00:00Z`,
-          endDate: `${endDate}T00:00:00Z`,
+          startDateTime: `${startDate}T00:00:00Z`,
+          endDateTime: `${endDate}T00:00:00Z`,
           apikey: process.env.REACT_APP_TMAPI_KEY,
         },
       }
