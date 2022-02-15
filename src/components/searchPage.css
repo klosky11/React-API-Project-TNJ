@@ -1,20 +1,9 @@
-/* .main {
-  background-image: url("../../public/placeholder-Topographic-map.jpg");
-  height: 100vh;
-} */
-
-/* .map-div {
-  background-image: url("../../public/");
-  height: 500px;
-  width: 100%;
-} */
-
 input {
   height: 35px;
   font-family: "Poppins", sans-serif;
 }
 
-button {
+.find-events-button {
   height: 35px;
   background-color: black;
   color: white;
@@ -32,9 +21,8 @@ button:hover {
 form {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 80px;
+  margin-top: 270px;
+  position: relative;
 }
 
 .where-to {
@@ -45,16 +33,26 @@ form {
   margin-bottom: 50px;
   font-size: 40px;
   width: 390px;
-  color: #45474a;
+  color: white;
   opacity: 1;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   padding: 5px;
   margin-left: 10px;
+  position: relative;
 }
-
+/* 
 .adventure {
-  text-decoration: underline black 10px;
+  text-decoration: underline white 10px;
+  font-weight:
+  
+} */
+
+.main-page-pic {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  /* opacity:  */
 }
 
 @media only screen and (min-width: 600px) {
@@ -66,6 +64,7 @@ form {
     margin-top: 150px;
     margin-left: 50px;
     margin-right: 50px;
+    position: relative;
   }
 
   input {
@@ -83,7 +82,15 @@ form {
   }
 
   .main-paragraph {
-    font-size: 50px;
+    font-size: 60px;
     margin-left: 50px;
+    position: relative;
+    color: white;
+  }
+
+  .main-page-pic {
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }

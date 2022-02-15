@@ -26,8 +26,8 @@ export function SearchPage() {
 
   return (
     <div className="main">
-      <div className="map-div"></div>
-      {/* just some placeholder text and background for now */}
+      <img className="main-page-pic" src="./event.jpg" />
+
       <h1 className="main-paragraph">
         Turn your trip into an <span className="adventure">adventure.</span>
       </h1>
@@ -54,7 +54,9 @@ export function SearchPage() {
             value={departureDate}
             onChange={(e) => setDepartureDate(e.target.value)}
           ></input>
-          <button type="submit">Find Events</button>
+          <button className="find-events-button" type="submit">
+            Find Events
+          </button>
         </form>
       </div>
     </div>

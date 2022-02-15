@@ -10,6 +10,7 @@ export function Header() {
     <div>
       <header className="main-header">
         <div className="logo">Uncharted Events </div>
+
         <button className="menu-mobile" onClick={() => setShow(true)}></button>
         <div className="links" style={{ display: show ? "block" : "none" }}>
           <Menu></Menu>

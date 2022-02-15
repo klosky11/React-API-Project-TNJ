@@ -1,11 +1,9 @@
 .main-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 7px;
+  height: 10px;
   font-family: "Rock Salt", cursive;
   margin: 0px 10px 0 10px;
-  padding-top: 20px;
 }
 
 header button {
@@ -16,9 +14,16 @@ header button {
   background-color: white;
 }
 
-.main-link-div {
-  margin-top: 200px;
-}
 nav a {
   margin-right: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .main-header {
+    height: 5px;
+  }
+
+  /* header button {
+    display: none;
+  } */
 }
