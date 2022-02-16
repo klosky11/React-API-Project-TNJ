@@ -5,14 +5,18 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
+import { getPlaces} from "../services/GetPhotos"
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
   const [tripResultsEvents, setTripResultsEvents] = useState<
     TicketResponse | undefined
   >();
+  const [tripResultPhoto, setTripResultPhoto] = useState<any>()
 
   const [searchParams, setSearchParams] = useSearchParams();
+
+
 
   useEffect(() => {
     const destination = searchParams.get("destination");

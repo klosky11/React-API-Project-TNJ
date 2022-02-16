@@ -38,4 +38,9 @@ nav li {
     padding-right: 25px;
     margin: 0;
   }
+
+  nav ul{
+
+    margin: 0;
+  }
 }
