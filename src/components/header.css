@@ -14,16 +14,28 @@ header button {
   background-color: white;
 }
 
-nav a {
-  margin-right: 10px;
+nav li {
+  display: none;
 }
+
+
 
 @media only screen and (min-width: 600px) {
   .main-header {
     height: 5px;
   }
 
-  /* header button {
+  header button {
     display: none;
-  } */
+  }
+
+  .links {
+    display: none;
+  }
+
+  nav li{
+    display: inline;
+    padding-right: 25px;
+    margin: 0;
+  }
 }

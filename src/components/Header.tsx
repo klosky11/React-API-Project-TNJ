@@ -6,14 +6,19 @@ import { Menu } from "./Menu";
 export function Header() {
   const [show, setShow] = useState(false);
 
+ 
+
   return (
     <div>
       <header className="main-header">
         <div className="logo">Uncharted Events </div>
+        <nav>
+        <Menu></Menu>
+        </nav>
 
-        <button className="menu-mobile" onClick={() => setShow(true)}></button>
+        <button className="menu-mobile" onClick={() => setShow((s) => !s)}></button>
         <div className="links" style={{ display: show ? "block" : "none" }}>
-          <Menu></Menu>
+        <Menu></Menu>
         </div>
       </header>
     </div>

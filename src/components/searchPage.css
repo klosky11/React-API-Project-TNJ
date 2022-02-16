@@ -54,6 +54,44 @@ form {
   position: absolute;
   /* opacity:  */
 }
+.links {
+  position:absolute;
+  left: 72%;
+  z-index: 1;
+  top: 3%;
+}
+.links ul {
+  padding-left: 2px;
+  z-index: 1;
+  height: 90px;
+  width: 100px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.links li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  width: 105px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 700;
+}
+
+
+.none {
+  display: none;
+}
+
+.show{
+  display:block
+}
 
 @media only screen and (min-width: 600px) {
   form {
