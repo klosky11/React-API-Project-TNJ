@@ -1,9 +1,13 @@
-.main-header {
+.main-header-container {
   display: flex;
   justify-content: space-between;
-  height: 10px;
+  height: 30px;
   font-family: "Rock Salt", cursive;
   margin: 0px 10px 0 10px;
+}
+
+.logo {
+  margin-top: 5px;
 }
 
 header button {
@@ -12,22 +16,62 @@ header button {
   height: 30px;
   border: none;
   background-color: white;
+  margin-top: 10px;
 }
 
 nav li {
   display: none;
 }
 
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.links {
+  position: absolute;
+  left: 72%;
+  z-index: 1;
+  top: 3%;
+}
+.links ul {
+  padding-left: 2px;
+  z-index: 1;
+  height: 90px;
+  width: 100px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.links li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  width: 105px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 700;
+}
+
+.none {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media only screen and (min-width: 600px) {
-  .main-header {
-    height: 5px;
+  .main-header-container {
+    height: 10px;
   }
 
   header button {
-    display: none;
-  }
-
-  .links {
     display: none;
   }
 
@@ -35,14 +79,15 @@ nav li {
     display: inline;
     padding-right: 25px;
     margin: 0;
+    font-family: "Poppins", sans-serif;
   }
 
   nav ul {
     margin: 0;
+    margin-top: 5px;
   }
 
-  a:link {
-    text-decoration: none;
-    color: black;
+  .links {
+    display: none;
   }
 }

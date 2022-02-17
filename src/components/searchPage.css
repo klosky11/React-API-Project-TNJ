@@ -1,32 +1,8 @@
-input {
-  height: 35px;
-  font-family: "Poppins", sans-serif;
-}
-
-.find-events-button {
-  height: 35px;
-  background-color: black;
-  color: white;
-  font-family: "Rock Salt", cursive;
-  height: 61px;
-  border: none;
-  border-radius: 2px;
-}
-
-button:hover {
-  background-color: blue;
-  color: black;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 270px;
-  position: relative;
-}
-
-.where-to {
-  height: 40px;
+.main-page-pic {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  /* opacity:  */
 }
 
 .main-paragraph {
@@ -41,82 +17,46 @@ form {
   margin-left: 10px;
   position: relative;
 }
-/* 
+
 .adventure {
-  text-decoration: underline white 10px;
-  font-weight:
-  
-} */
-
-.main-page-pic {
-  height: 400px;
-  width: 100%;
-  position: absolute;
-  /* opacity:  */
-}
-.links {
-  position:absolute;
-  left: 72%;
-  z-index: 1;
-  top: 3%;
-}
-.links ul {
-  padding-left: 2px;
-  z-index: 1;
-  height: 90px;
-  width: 100px;
-  background-color: whitesmoke;
-  color: black;
+  text-decoration: underline rgb(84, 1, 84) 10px;
+  /* font-weight: ; */
 }
 
-.links li {
-  list-style-type: none;
-  margin-bottom: 10px;
-  width: 105px;
-  height: 20px;
-  font-size: 10px;
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 270px;
+  position: relative;
 }
 
-.links a {
-  text-decoration: none;
+.where-to {
+  height: 60px;
+}
+
+input {
+  height: 60px;
   font-family: "Poppins", sans-serif;
-  color: black;
-  font-weight: 700;
 }
 
-
-.none {
-  display: none;
+.find-events-button {
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-family: "Rock Salt", cursive;
+  height: 61px;
+  border: none;
+  border-radius: 2px;
 }
 
-.show{
-  display:block
+.find-events-button:hover {
+  background-color: rgb(84, 1, 84);
 }
 
 @media only screen and (min-width: 600px) {
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 150px;
-    margin-left: 50px;
-    margin-right: 50px;
-    position: relative;
-  }
-
-  input {
-    width: 300px;
-    height: 55px;
-  }
-
-  .where-to {
-    height: 59px;
-  }
-
-  button {
-    width: 300px;
-    height: 58px;
+  .main-page-pic {
+    height: 100%;
+    position: absolute;
   }
 
   .main-paragraph {
@@ -126,9 +66,29 @@ form {
     color: white;
   }
 
-  .main-page-pic {
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 185px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+  }
+
+  .where-to {
+    height: 57px;
+    height: 64px;
+  }
+
+  input {
+    width: 300px;
+    height: 60px;
+  }
+
+  .find-events-button {
+    width: 300px;
+    height: 62px;
   }
 }

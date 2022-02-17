@@ -49,20 +49,20 @@ export function EventResultsList(props: { event?: Event }) {
     if (parseInt(timeArray[0]) > 11) {
       amOrpm = "pm";
     }
-    if (parseInt(timeArray[0]) > 13) {
+    if (parseInt(timeArray[0]) > 12) {
       timeArray[0] = parseInt(timeArray[0]) - 12;
     }
 
     return `${month} ${dateArray[2]}, ${dateArray[0]} ${timeArray[0]}:${timeArray[1]}${amOrpm}`;
   }
   return (
-    <div className="event-container">
+    <div className="events-container">
       <img
         className="event-image"
         alt="EventImage"
         src={props.event?.images[1].url}
       />
-      <div className="title-date-tickets">
+      <div className="date-title-venue-container">
         <p className="event-date">
           {" "}
           {convertDate(
@@ -71,15 +71,11 @@ export function EventResultsList(props: { event?: Event }) {
           )}
         </p>
         <h2 className="event-title">{props.event?.name}</h2>
-
-        {/* <a className="ticket-link" href={props.event?.url}>
-          See Tickets
-        </a> */}
+        <p className="event-venue">{`${props.event?._embedded.venues[0].name},  ${props.event?._embedded.venues[0].city.name}`}</p>
       </div>
 
-      {/* <button className="favorite-button">Favorite</button> */}
       <a className="ticket-link" href={props.event?.url}>
-        See Tickets
+        Tickets
       </a>
     </div>
   );

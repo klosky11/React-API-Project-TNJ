@@ -25,14 +25,13 @@ export function SearchPage() {
   }
 
   return (
-    <div className="main">
+    <div className="main-container">
       <img className="main-page-pic" src="./event.jpg" />
 
       <h1 className="main-paragraph">
         Turn your trip into an <span className="adventure">adventure.</span>
       </h1>
 
-      {/* <input type="search" placeholder="Where to?" value={searchForm.searchTerm}></input> */}
       <div className="form-container">
         <form onSubmit={submitHandler}>
           <input
@@ -42,18 +41,23 @@ export function SearchPage() {
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
           ></input>
+
           <input
+            className="date-input"
             type="date"
             placeholder="Arrival date YYYY-MM-DD"
             value={arrivalDate}
             onChange={(e) => setArrivalDate(e.target.value)}
           ></input>
+
           <input
+            className="date-input"
             type="date"
             placeholder="Departured date YYYY-MM-DD"
             value={departureDate}
             onChange={(e) => setDepartureDate(e.target.value)}
           ></input>
+
           <button className="find-events-button" type="submit">
             Find Events
           </button>

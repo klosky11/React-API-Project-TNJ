@@ -6,6 +6,7 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
+import "./eventResultList.css";
 // import { getPlaces } from "../services/GetPhotos";
 
 export function TripResult() {
@@ -36,6 +37,7 @@ export function TripResult() {
   return (
     <div>
       <a
+        className="airbnb"
         href={`https://www.airbnb.com/s/${searchParams.get(
           "destination"
         )}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&checkin=${searchParams.get(
@@ -48,6 +50,7 @@ export function TripResult() {
         Airbnb
       </a>
       <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
+
       <EventResults events={tripResultsEvents?._embedded.events} />
     </div>
   );

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Event, TicketResponse } from "../Models/TicketResponse";
 import { getTMEvents } from "../services/GetTMEvents";
 import { EventResultsList } from "./EventResultList";
-import "./eventResults.css";
 
 export function EventResults(props: { events?: Event[] }) {
   return (
@@ -13,8 +12,12 @@ export function EventResults(props: { events?: Event[] }) {
       </h1>
 
       <ul>
-      {props.events?.map(item => <li key={item.id} > <EventResultsList event={item}></EventResultsList></li>)}
-    
+        {props.events?.map((item) => (
+          <li key={item.id}>
+            {" "}
+            <EventResultsList event={item}></EventResultsList>
+          </li>
+        ))}
       </ul>
     </div>
   );
