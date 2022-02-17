@@ -3,15 +3,15 @@ import axios from "axios";
 
 
 
-export async function getPlaces(city: string) {
+export function getPlaces(city: string) {
 
-    const proxyUrl = "https://my-cors-anywhere-deployment/";
-    const placesRequestUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=photo&input=${city}&inputtype=textquery&key=${process.env.REACT_APP_GPHOTOSAPI_KEY}`;
-
-    const initialPlacesRequest = await axios
-    .get(proxyUrl + placesRequestUrl)
+  return axios
+    .get(
+      `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=photo&input=${city}&inputtype=textquery&key=${process.env.REACT_APP_GPHOTOSAPI_KEY}`
+    )
     .then((response) => response.data);
-    const photoRef = initialPlacesRequest?.data?.candidates?.[0]?.photos?.[0]?.photo_reference;
+
+    
   
 }
 

@@ -5,7 +5,7 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
-import { getPlaces } from "../services/GetPhotos";
+import { getPhoto, getPlaces } from "../services/GetPhotos";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -15,6 +15,8 @@ export function TripResult() {
   const [tripResultPhoto, setTripResultPhoto] = useState<any>();
 
   const [searchParams, setSearchParams] = useSearchParams();
+
+
 
   useEffect(() => {
     const destination = searchParams.get("destination");
@@ -29,6 +31,19 @@ export function TripResult() {
         setTripResultsEvents(data)
       );
     }
+    
+    // getPlaces(destination!).then((data) => {
+    //   const photo_ref = data.candidates[0].photos[0].photo_reference;
+     
+     
+    //     getPhoto(photo_ref).then(data.response);
+    //     console.log(data.response)
+    //     setTripResultPhoto(data.response);
+    
+    // });
+
+
+    
   }, [searchParams]);
 
   return (
