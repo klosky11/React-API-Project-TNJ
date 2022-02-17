@@ -46,12 +46,13 @@ export function EventResultsList(props: { event?: Event }) {
         month = "December";
         break;
     }
+    if (parseInt(timeArray[0]) > 11) {
+      amOrpm = "pm";
+    }
     if (parseInt(timeArray[0]) > 13) {
       timeArray[0] = parseInt(timeArray[0]) - 12;
     }
-    if (parseInt(timeArray[0]) > 12) {
-      amOrpm = "pm";
-    }
+
     return `${month} ${dateArray[2]}, ${dateArray[0]} ${timeArray[0]}:${timeArray[1]}${amOrpm}`;
   }
   return (
