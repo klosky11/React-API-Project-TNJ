@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { TicketResponse } from "../Models/TicketResponse";
-import { getPhoto } from "../services/GetPhotos";
 import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
-import "./eventResultList.css";
-// import { getPlaces } from "../services/GetPhotos";
+import { getPlaces } from "../services/GetPhotos";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -31,7 +29,15 @@ export function TripResult() {
         setTripResultsEvents(data)
       );
     }
-    getPhoto();
+
+    // getPlaces(destination!).then((data) => {
+    //   const photo_ref = data.candidates[0].photos[0].photo_reference;
+
+    //     getPhoto(photo_ref).then(data.response);
+    //     console.log(data.response)
+    //     setTripResultPhoto(data.response);
+
+    // });
   }, [searchParams]);
 
   return (
