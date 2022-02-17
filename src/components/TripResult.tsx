@@ -5,7 +5,7 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
-import { getPhoto, getPlaces } from "../services/GetPhotos";
+import { getPlaces } from "../services/GetPhotos";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
