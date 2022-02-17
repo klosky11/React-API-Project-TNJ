@@ -51,16 +51,8 @@ ul {
   height: 80px;
   object-fit: contain;
 }
-.favorite-button {
-  width: 80px;
-  height: 30px;
-}
 
 @media only screen and (min-width: 600px) {
-  .favorite-button {
-    margin-bottom: 30px;
-  }
-
   .event-image {
     width: 200px;
     height: 200px;
@@ -69,5 +61,6 @@ ul {
 
   .title-date-tickets {
     margin-left: 10px;
+    width: 600px;
   }
 }
