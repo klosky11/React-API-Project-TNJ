@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { TicketResponse } from "../Models/TicketResponse";
+import { getPhoto } from "../services/GetPhotos";
 import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
-import { getPlaces } from "../services/GetPhotos";
+// import { getPlaces } from "../services/GetPhotos";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -29,6 +30,7 @@ export function TripResult() {
         setTripResultsEvents(data)
       );
     }
+    getPhoto();
   }, [searchParams]);
 
   return (
