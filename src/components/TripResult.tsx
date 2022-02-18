@@ -5,7 +5,8 @@ import { getTMEvents } from "../services/GetTMEvents";
 import { getWeather } from "../services/GetWeather";
 import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
-import { getPlaces } from "../services/GetPhotos";
+import { getPhoto } from "../services/GetPhotos";
+import { PhotoResult } from "./PhotoResult";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -25,19 +26,17 @@ export function TripResult() {
         console.log(data);
         setTripResultsWeather(data);
       });
-      getTMEvents(destination, arrivalDate, departureDate).then((data) =>
+      getTMEvents(destination, arrivalDate, departureDate).then((data) => {
+     
         setTripResultsEvents(data)
-      );
+      });
     }
 
-    // getPlaces(destination!).then((data) => {
-    //   const photo_ref = data.candidates[0].photos[0].photo_reference;
+    getPhoto(destination!).then((data) => {
+      console.log(data)
+      setTripResultPhoto(data)
 
-    //     getPhoto(photo_ref).then(data.response);
-    //     console.log(data.response)
-    //     setTripResultPhoto(data.response);
-
-    // });
+    });
   }, [searchParams]);
 
   return (
@@ -56,6 +55,7 @@ export function TripResult() {
         Airbnb
       </a>
       <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
+      <PhotoResult photo={tripResultPhoto} />
 
       <EventResults events={tripResultsEvents?._embedded.events} />
     </div>

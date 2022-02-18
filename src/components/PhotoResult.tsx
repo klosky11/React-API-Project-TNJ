@@ -4,8 +4,7 @@ export function PhotoResult(prop:{photo?:any}) {
 
     return (
     <div>
-     
-        {/* <PhotoResultList photo={prop.photo} /> */}
+        <img src={prop.photo} />
      
     </div>
     );
