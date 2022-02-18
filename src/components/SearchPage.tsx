@@ -18,7 +18,7 @@ export function SearchPage() {
     queryStringParams.destination = destination;
     queryStringParams.arrivalDate = arrivalDate;
     queryStringParams.departureDate = departureDate;
-    setSearchParams(new URLSearchParams(queryStringParams));
+    // setSearchParams(new URLSearchParams(queryStringParams));
     navigate(
       `/tripResult?` + new URLSearchParams(queryStringParams).toString()
     );
