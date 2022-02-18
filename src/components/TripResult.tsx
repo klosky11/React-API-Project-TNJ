@@ -7,15 +7,31 @@ import { EventResults } from "./EventResults";
 import { WeatherResult } from "./WeatherResult";
 import { getPhoto } from "../services/GetPhotos";
 import { PhotoResult } from "./PhotoResult";
+import { useContext } from "react";
+import { TripContext } from "../context/TripContext";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
+
   const [tripResultsEvents, setTripResultsEvents] = useState<
     TicketResponse | undefined
   >();
+
   const [tripResultPhoto, setTripResultPhoto] = useState<any>();
 
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const [thisTrip, setThisTrip] = useState({
+    searchTerm: searchParams.get("destination")!,
+    arrivalDate: searchParams.get("arrivalDate")!,
+    departureDate: searchParams.get("departureDate")!,
+  });
+
+  const { addTrip } = useContext(TripContext);
+
+  // setThisTrip(prev =>{
+  //   prev.
+  // })
 
   useEffect(() => {
     const destination = searchParams.get("destination");
@@ -27,15 +43,13 @@ export function TripResult() {
         setTripResultsWeather(data);
       });
       getTMEvents(destination, arrivalDate, departureDate).then((data) => {
-     
-        setTripResultsEvents(data)
+        setTripResultsEvents(data);
       });
     }
 
     getPhoto(destination!).then((data) => {
-      console.log(data)
-      setTripResultPhoto(data)
-
+      console.log(data);
+      setTripResultPhoto(data);
     });
   }, [searchParams]);
 
@@ -54,6 +68,7 @@ export function TripResult() {
       >
         Airbnb
       </a>
+      <button onClick={() => addTrip(thisTrip)}>Save This Trip</button>
       <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
       <PhotoResult photo={tripResultPhoto} />
 

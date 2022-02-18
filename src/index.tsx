@@ -9,20 +9,23 @@ import { SavedTrips } from "./components/SavedTrips";
 import { SpontaneousTrip } from "./components/SpontaneousTrip";
 import { Header } from "./components/Header";
 import { TripResult } from "./components/TripResult";
+import { TripContextProvider } from "./context/TripContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header />
+    <TripContextProvider>
+      <BrowserRouter>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<SearchPage />} />
-        <Route path="/home" element={<SearchPage />} />
-        <Route path="/saved/:id" element={<SavedTrips />} />
-        <Route path="/results/spontaneous" element={<SpontaneousTrip />} />
-        <Route path="/tripResult" element={<TripResult />} />
-      </Routes>
-    </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SearchPage />} />
+          <Route path="/home" element={<SearchPage />} />
+          <Route path="/saved" element={<SavedTrips />} />
+          <Route path="/results/spontaneous" element={<SpontaneousTrip />} />
+          <Route path="/tripResult" element={<TripResult />} />
+        </Routes>
+      </BrowserRouter>
+    </TripContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
