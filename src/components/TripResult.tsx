@@ -25,8 +25,12 @@ export function TripResult() {
     searchTerm: searchParams.get("destination")!,
     arrivalDate: searchParams.get("arrivalDate")!,
     departureDate: searchParams.get("departureDate")!,
+    URL: window.location.search
   });
 
+  console.log(thisTrip.URL)
+
+  
   const { addTrip } = useContext(TripContext);
 
   // setThisTrip(prev =>{

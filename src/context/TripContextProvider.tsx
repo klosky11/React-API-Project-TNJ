@@ -18,6 +18,8 @@ export function TripContextProvider(props: { children: ReactNode }) {
     }
   }
 
+  
+
   return (
     <TripContext.Provider value={{ trips, addTrip, removeTrip }}>
       {props.children}
