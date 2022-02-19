@@ -2,36 +2,35 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { TripContext } from "../context/TripContext";
 
-
-
 export function SavedTrips() {
   const { trips, removeTrip } = useContext(TripContext);
 
+  const navigate = useNavigate();
 
- const navigate = useNavigate()
+  function handleGoToTrip(e: any) {
+    const foundTrip = trips.find((trip) => trip.URL === e.target.id);
 
-  function handleSubmit(e:any) {
-  
-  //  navigate(
-  //    `/tripResult?` + trip.URL
-  //  )
-  console.log(e)
-  
+    console.log(foundTrip);
+    console.log(e.target.id);
+    navigate(`/tripResult` + foundTrip?.URL);
   }
 
-
-  
+  function handleRemove(e: any) {
+    removeTrip(e.target.id);
+  }
 
   return (
     <div>
       <ul>
         {trips.map((trip, index) => (
-
-          <li key={trip.URL + index}>
+          <li key={trip.URL}>
             {`${trip.searchTerm}: ${trip.arrivalDate}-${trip.departureDate}`}
-            {trip.id = trip.URL + index}
-            <button onClick={handleSubmit}>Go To Trip</button>
-            <button>Remove</button>
+
+            <button id={trip.URL} onClick={handleGoToTrip}>
+              Go To Trip
+            </button>
+
+            <button onClick={handleRemove}>Remove</button>
           </li>
         ))}
       </ul>
