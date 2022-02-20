@@ -16,6 +16,7 @@ export function SavedTrips() {
   }
 
   function handleRemove(e: any) {
+    console.log(e.target.id);
     removeTrip(e.target.id);
   }
 
@@ -30,7 +31,9 @@ export function SavedTrips() {
               Go To Trip
             </button>
 
-            <button onClick={handleRemove}>Remove</button>
+            <button id={trip.URL} onClick={(e) => handleRemove(e)}>
+              Remove
+            </button>
           </li>
         ))}
       </ul>

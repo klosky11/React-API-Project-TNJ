@@ -10,15 +10,14 @@ export function TripContextProvider(props: { children: ReactNode }) {
   }
 
   function removeTrip(id: string) {
-    const found = trips.find((trip) => trip.id === id);
+    const found = trips.find((trip) => trip.URL === id);
+
     if (found !== undefined) {
       const index = trips.indexOf(found);
 
       setTrips((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
     }
   }
-
-  
 
   return (
     <TripContext.Provider value={{ trips, addTrip, removeTrip }}>
