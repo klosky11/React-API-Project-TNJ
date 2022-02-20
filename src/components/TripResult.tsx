@@ -25,17 +25,12 @@ export function TripResult() {
     searchTerm: searchParams.get("destination")!,
     arrivalDate: searchParams.get("arrivalDate")!,
     departureDate: searchParams.get("departureDate")!,
-    URL: window.location.search
+    URL: window.location.search,
   });
 
-  console.log(thisTrip.URL)
+  console.log(thisTrip.URL);
 
-  
   const { addTrip } = useContext(TripContext);
-
-  // setThisTrip(prev =>{
-  //   prev.
-  // })
 
   useEffect(() => {
     const destination = searchParams.get("destination");
@@ -43,16 +38,13 @@ export function TripResult() {
     const departureDate = searchParams.get("departureDate");
     if (destination && arrivalDate && departureDate) {
       getWeather(destination, arrivalDate, departureDate).then((data) => {
-        console.log(data);
         setTripResultsWeather(data);
       });
       getTMEvents(destination, arrivalDate, departureDate).then((data) => {
         setTripResultsEvents(data);
       });
     }
-
     getPhoto(destination!).then((data) => {
-      console.log(data);
       setTripResultPhoto(data);
     });
   }, [searchParams]);

@@ -9,14 +9,10 @@ export function SavedTrips() {
 
   function handleGoToTrip(e: any) {
     const foundTrip = trips.find((trip) => trip.URL === e.target.id);
-
-    console.log(foundTrip);
-    console.log(e.target.id);
     navigate(`/tripResult` + foundTrip?.URL);
   }
 
   function handleRemove(e: any) {
-    console.log(e.target.id);
     removeTrip(e.target.id);
   }
 
