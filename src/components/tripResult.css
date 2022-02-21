@@ -1,0 +1,27 @@
+/* TripResult body{
+    background-color: rgb(238, 236, 236);
+} */
+
+.side-by-side{
+    display: flex;
+}
+
+.photo-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.airbnb-saveButton{
+    position: relative;
+    top: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: solid;
+}
+

@@ -2,7 +2,7 @@ import { WeatherResultListForecasted } from "./WeatherResultListForecasted";
 
 export function WeatherResult(prop: { weather?: any[] }) {
   return (
-    <div>
+    <div className="weather-container">
       <h1 className="weather-header"> Weather during your stay :</h1>
 
       {/* {prop.weather?.days} */}
