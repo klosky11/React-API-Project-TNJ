@@ -9,7 +9,7 @@ import { getPhoto } from "../services/GetPhotos";
 import { PhotoResult } from "./PhotoResult";
 import { useContext } from "react";
 import { TripContext } from "../context/TripContext";
-import "./tripResult.css"
+import "./tripResult.css";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -52,43 +52,31 @@ export function TripResult() {
 
   return (
     <div className="results-page">
-     
-     <div className="airbnb-saveButton-photo">
-     <h1>Find the fun in </h1>
-     <h1 className="italic-city">{thisTrip.searchTerm}</h1>
-   
-      
-      
-      <PhotoResult photo={tripResultPhoto} />
-      <button className="save-button" onClick={() => addTrip(thisTrip)}>Save This Trip</button>
-      <a
-        className="airbnb"
-        href={`https://www.airbnb.com/s/${searchParams.get(
-          "destination"
-        )}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&checkin=${searchParams.get(
-          "arrivalDate"
-        )}&checkout=${searchParams.get(
-          "departureDate"
-        )}&source=structured_search_input_header&search_type=filter_change`}
-      >
-        Find Airbnb
-      </a>
-<<<<<<< HEAD
+      <div className="airbnb-saveButton-photo">
+        <h1>Find the fun in </h1>
+        <h1 className="italic-city">{thisTrip.searchTerm}</h1>
 
-      <button onClick={() => addTrip(thisTrip)}>Save This Trip</button>
-
-      <div className="weatherCity">
-        <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
         <PhotoResult photo={tripResultPhoto} />
-      </div>
-=======
+        <button className="save-button" onClick={() => addTrip(thisTrip)}>
+          Save This Trip
+        </button>
+        <a
+          className="airbnb"
+          href={`https://www.airbnb.com/s/${searchParams.get(
+            "destination"
+          )}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&checkin=${searchParams.get(
+            "arrivalDate"
+          )}&checkout=${searchParams.get(
+            "departureDate"
+          )}&source=structured_search_input_header&search_type=filter_change`}
+        >
+          Find Airbnb
+        </a>
       </div>
       <div className="side-by-side">
-      <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
-     
->>>>>>> 8497208973a7ef2ae90187bc858101c3055a103a
+        <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
 
-      <EventResults events={tripResultsEvents?._embedded.events} />
+        <EventResults events={tripResultsEvents?._embedded.events} />
       </div>
     </div>
   );
