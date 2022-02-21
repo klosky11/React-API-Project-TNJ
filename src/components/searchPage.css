@@ -35,7 +35,7 @@ form {
 }
 
 input {
-  height: 60px;
+  height: 70px;
   font-family: "Poppins", sans-serif;
   font-weight: 1000;
 }
@@ -52,6 +52,10 @@ input {
 }
 
 .find-events-button:hover {
+  background-color: rgb(84, 1, 84);
+}
+
+.find-events-button:visited {
   background-color: rgb(84, 1, 84);
 }
 
@@ -86,7 +90,7 @@ input {
 
   input {
     width: 300px;
-    height: 60px;
+    height: 64px;
   }
 
   .find-events-button {

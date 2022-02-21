@@ -52,30 +52,30 @@ export function TripResult() {
 
   return (
     <div className="results-page">
+      <h1 className="results-header">Find the fun in </h1>
+      <h1 className="italic-city">{thisTrip.searchTerm}</h1>
       <div className="airbnb-saveButton-photo">
-        <h1>Find the fun in </h1>
-        <h1 className="italic-city">{thisTrip.searchTerm}</h1>
-
         <PhotoResult photo={tripResultPhoto} />
-        <button className="save-button" onClick={() => addTrip(thisTrip)}>
-          Save This Trip
-        </button>
-        <a
-          className="airbnb"
-          href={`https://www.airbnb.com/s/${searchParams.get(
-            "destination"
-          )}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&checkin=${searchParams.get(
-            "arrivalDate"
-          )}&checkout=${searchParams.get(
-            "departureDate"
-          )}&source=structured_search_input_header&search_type=filter_change`}
-        >
-          Find Airbnb
-        </a>
-      </div>
-      <div className="side-by-side">
-        <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
 
+        <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
+      </div>
+
+      <button className="save-button" onClick={() => addTrip(thisTrip)}>
+        Save This Trip
+      </button>
+      <a
+        className="airbnb"
+        href={`https://www.airbnb.com/s/${searchParams.get(
+          "destination"
+        )}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&checkin=${searchParams.get(
+          "arrivalDate"
+        )}&checkout=${searchParams.get(
+          "departureDate"
+        )}&source=structured_search_input_header&search_type=filter_change`}
+      >
+        Find Airbnb
+      </a>
+      <div className="side-by-side">
         <EventResults events={tripResultsEvents?._embedded.events} />
       </div>
     </div>

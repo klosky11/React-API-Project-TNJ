@@ -1,33 +1,85 @@
 /* TripResult body{
     background-color: rgb(238, 236, 236);
 } */
+/* 
+.side-by-side {
+  display: flex;
+} */
 
-.side-by-side{
-    display: flex;
+/* .photo-container { */
+/* display: flex; */
+/* justify-content: center;
+} */
+
+.airbnb-saveButton-photo {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
 }
 
-.photo-container{
+.italic-city {
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.city-pic {
+  width: 100%;
+  height: 400px;
+  margin-top: 8px;
+}
+
+.results-header {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.save-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .side-by-side {
+    display: block;
+  }
+
+  .airbnb-saveButton-photo {
     display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+
     justify-content: center;
-   
-}
+  }
 
-.airbnb-saveButton-photo{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  .city-pic {
+    width: 600px;
+    height: 500px;
+  }
 
+  .save-button {
+    margin-left: 65px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    height: 61px;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 1px;
+  }
 
+  .save-button:hover {
+    background-color: rgb(84, 1, 84);
+  }
 
-.italic-city{
-    font-style: italic;
-}
+  a:hover {
+    color: rgb(84, 1, 84);
+  }
 
-
-@media only screen and (max-width: 600px) {
-    .side-by-side{
-        display: block;
-    }
+  a:visited {
+    color: rgb(84, 1, 84);
+  }
 }

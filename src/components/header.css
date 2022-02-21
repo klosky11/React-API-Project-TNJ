@@ -24,7 +24,6 @@ nav li {
 }
 
 a:link {
-  
   color: black;
 }
 
@@ -45,7 +44,6 @@ a:link {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
 
 .links li {
