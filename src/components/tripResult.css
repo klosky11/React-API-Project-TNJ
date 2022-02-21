@@ -1,10 +1,9 @@
-body{
-    background-color: rgb(238, 236, 236);
+body {
+  background-color: rgb(238, 236, 236);
 }
 
-
 .airbnb-saveButton-photo {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 
@@ -32,6 +31,34 @@ body{
   margin-right: 10px;
 }
 
+.save-button {
+  margin-left: 10px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+
+.save-button:hover {
+  background-color: rgb(84, 1, 84);
+}
+
+a:hover {
+  color: rgb(84, 1, 84);
+}
+
+a:visited {
+  color: rgb(84, 1, 84);
+}
+
+.results-header {
+  font-family: "Poppins", sans-serif;
+}
+
 @media only screen and (min-width: 600px) {
   .side-by-side {
     display: block;
@@ -53,25 +80,17 @@ body{
 
   .save-button {
     margin-left: 65px;
-    height: 35px;
-    background-color: black;
-    color: white;
-    font-family: "Rock Salt", cursive;
     height: 61px;
-    border: none;
-    border-radius: 2px;
-    letter-spacing: 1px;
   }
 
-  .save-button:hover {
-    background-color: rgb(84, 1, 84);
+  .italic-city {
+    font-style: italic;
+    margin-left: 60px;
   }
 
-  a:hover {
-    color: rgb(84, 1, 84);
-  }
-
-  a:visited {
-    color: rgb(84, 1, 84);
+  .results-header {
+    margin-top: 30px;
+    margin-left: 60px;
+    font-family: "Poppins", sans-serif;
   }
 }

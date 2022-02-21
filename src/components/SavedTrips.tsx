@@ -24,7 +24,7 @@ export function SavedTrips() {
         src="ian-dooley-DuBNA1QMpPA-unsplash.jpg"
       />
       <ul className="saved-list-container">
-        <h1 className="saved-header">Your Saved Trips</h1>
+        <h1 className="saved-header">Your Saved Trips :</h1>
         {trips.map((trip, index) => (
           <li className="saved-line" key={trip.URL}>
             {`${trip.searchTerm}: ${trip.arrivalDate} to ${trip.departureDate}`}

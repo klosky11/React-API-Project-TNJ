@@ -37,7 +37,7 @@
 
 .date-title-venue-container {
   margin-left: 15px;
-  width: 400px;
+  width: 270px;
 }
 
 .event-date {
@@ -53,10 +53,6 @@
   margin-bottom: 0px;
   font-size: 15px;
 }
-
-/* .event-venue{
-
-} */
 
 .ticket-link {
   text-decoration: none;
@@ -79,20 +75,20 @@ ul {
     height: 200px;
   }
 
+  .events-container {
+    margin-left: 30px;
+  }
+
   .date-title-venue-container {
     margin-left: 10px;
     width: 900px;
   }
-
-  /* .event-date {
-    font-size:
-  } */
 
   .event-title {
     font-size: 20px;
   }
 
   .events-header {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 }
