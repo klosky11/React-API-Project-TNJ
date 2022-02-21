@@ -25,4 +25,5 @@ HTML, CSS, JavaScript
 React
 
 #### Screenshot of Home Page
-![alt text](/public/HomePageScreenshot.png.png)
+![alt text](/public/HomePageScreenshot.png)
+
