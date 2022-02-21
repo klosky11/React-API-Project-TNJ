@@ -53,7 +53,13 @@ export function TripResult() {
   return (
     <div className="results-page">
      
-     <div className="airbnb-saveButton">
+     <div className="airbnb-saveButton-photo">
+     <h1>Find the fun in </h1>
+     <h1 className="italic-city">{thisTrip.searchTerm}</h1>
+   
+      
+      
+      <PhotoResult photo={tripResultPhoto} />
       <button className="save-button" onClick={() => addTrip(thisTrip)}>Save This Trip</button>
       <a
         className="airbnb"
@@ -69,8 +75,6 @@ export function TripResult() {
         Find Airbnb
       </a>
       </div>
-      <h1>{thisTrip.searchTerm}</h1>
-      <PhotoResult photo={tripResultPhoto} />
       <div className="side-by-side">
       <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
      

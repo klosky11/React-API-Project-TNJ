@@ -9,19 +9,25 @@
 .photo-container{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+   
 }
 
-.airbnb-saveButton{
-    position: relative;
-    top: 375px;
+.airbnb-saveButton-photo{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-a{
-    text-decoration: solid;
+
+
+.italic-city{
+    font-style: italic;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .side-by-side{
+        display: block;
+    }
+}
