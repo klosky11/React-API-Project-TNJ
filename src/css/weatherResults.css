@@ -1,0 +1,29 @@
+.weatherContainer {
+  font-family: "Roboto Slab", sans-serif;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: auto;
+  border: 1px solid black;
+  width: 500px;
+  margin: none;
+  background: #f0f0f0;
+  color: #313e48;
+}
+ul {
+  margin-block-start: 0;
+}
+.weatherCell {
+  /* margin-right: 15px; */
+  padding-right: 15px;
+  padding-left: 15px;
+  min-width: 200px;
+  /* background-image: url("/public/iconimages/25501.jpg");
+  background-size: cover; */
+  border-right: 1px solid black;
+}
+
+/* .weatherIcon {
+  $thumbnail: ;
+} */
