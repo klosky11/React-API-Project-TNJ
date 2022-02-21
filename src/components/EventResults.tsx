@@ -12,23 +12,21 @@ export function EventResults(props: { events?: Event[] }) {
     });
   }
   return (
-    <div>
-    <h1 className="events-header">
-    {" "}
-    Events happening close to your destination :
-  </h1>
-    <div className="events-container">
-    
-
-      <ul>
-        {sortEvents(props.events)?.map((item) => (
-          <li key={item.id}>
-            {" "}
-            <EventResultsList event={item}></EventResultsList>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div className="allEvents">
+      <h1 className="events-header">
+        {" "}
+        Events happening close to your destination :
+      </h1>
+      <div className="events-container">
+        <ul>
+          {sortEvents(props.events)?.map((item) => (
+            <li key={item.id}>
+              {" "}
+              <EventResultsList event={item}></EventResultsList>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

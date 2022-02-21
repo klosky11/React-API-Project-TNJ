@@ -3,7 +3,10 @@ import "../css/weatherResults.css";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 export function WeatherResult(prop: { weather?: any[] }) {
+<<<<<<< HEAD
  
+=======
+>>>>>>> f6f522dcb0535d66ad4ca807dcf7dc91edc66ff9
   return (
     <div>
       <h1 className="weather-header"> Weather during your stay :</h1>
