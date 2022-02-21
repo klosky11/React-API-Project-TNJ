@@ -5,23 +5,42 @@
   flex-direction: row;
   justify-content: space-between;
   overflow-x: auto;
-  border: 1px solid black;
-  width: 500px;
+
+  width: 600px;
   margin: none;
-  background: #f0f0f0;
+
   color: #313e48;
+  min-height: 400px;
 }
 ul {
   margin-block-start: 0;
 }
 .weatherCell {
   /* margin-right: 15px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-right: 15px;
   padding-left: 15px;
-  min-width: 200px;
-  /* background-image: url("/public/iconimages/25501.jpg");
-  background-size: cover; */
-  border-right: 1px solid black;
+  min-width: 220px;
+  max-width: 220px;
+  background-image: url("/public/iconimages/cloudbackground.jpg");
+  background-size: cover;
+  height: 500px;
+}
+
+.weather {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.hrContainer {
+  display: flex;
+  height: 500px;
 }
 
 /* .weatherIcon {

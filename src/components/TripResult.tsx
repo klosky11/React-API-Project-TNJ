@@ -9,6 +9,7 @@ import { getPhoto } from "../services/GetPhotos";
 import { PhotoResult } from "./PhotoResult";
 import { useContext } from "react";
 import { TripContext } from "../context/TripContext";
+import "../css/tripResults.css";
 
 export function TripResult() {
   const [tripResultsWeather, setTripResultsWeather] = useState<any>([]);
@@ -59,14 +60,17 @@ export function TripResult() {
           "arrivalDate"
         )}&checkout=${searchParams.get(
           "departureDate"
-        )}&source=structured_search_input_header&search_type=filter_change
-`}
+        )}&source=structured_search_input_header&search_type=filter_change`}
       >
         Airbnb
       </a>
+
       <button onClick={() => addTrip(thisTrip)}>Save This Trip</button>
-      <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
-      <PhotoResult photo={tripResultPhoto} />
+
+      <div className="weatherCity">
+        <WeatherResult weather={tripResultsWeather.days}></WeatherResult>
+        <PhotoResult photo={tripResultPhoto} />
+      </div>
 
       <EventResults events={tripResultsEvents?._embedded.events} />
     </div>

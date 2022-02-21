@@ -83,13 +83,17 @@ export function WeatherResultListForecasted(prop: { weather?: any }) {
         alt={"icon"}
       />
 
-      <h4>{prop.weather?.description}</h4>
-      <p>Temp Highs:{prop.weather?.tempmax}</p>
-      <p>Temp Low:{prop.weather?.tempmin}</p>
-      <p>Feels Like:{prop.weather?.feelslike}</p>
-      {/* {(prop.weather?.preciptype.length >= 1) ? prop.weather?.preciptype.map((precip,index) => <p key={index}> {precip}</p>) : "" }   */}
-      <p>Precipitation %:{prop.weather?.preciprob}</p>
+      <h1>{`${prop.weather?.temp}`}&deg;</h1>
+      <p>
+        {prop.weather?.tempmin}&deg; / {prop.weather?.tempmax}&deg;
+      </p>
+
+      {prop.weather?.preciptype && (
+        <p>{`${prop.weather?.precipprob}% chance of ${prop.weather?.preciptype}`}</p>
+      )}
+
       <p>Wind:{prop.weather?.windspeed}</p>
+      <h4>{prop.weather?.description}</h4>
     </div>
   );
 }
