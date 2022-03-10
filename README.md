@@ -24,6 +24,9 @@ HTML, CSS, JavaScript
 ### Libraries Used
 React
 
+### Live
+https://klosky11.github.io/React-API-Project-TNJ
+
 #### Screenshot of Home Page
 ![alt text](/public/HomePageScreenshot.png)
 
