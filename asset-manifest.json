@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-API-Project-TNJ/static/css/main.880a27b7.css",
+    "main.js": "/React-API-Project-TNJ/static/js/main.27420a3b.js",
+    "static/js/787.ff08f647.chunk.js": "/React-API-Project-TNJ/static/js/787.ff08f647.chunk.js",
+    "index.html": "/React-API-Project-TNJ/index.html",
+    "main.880a27b7.css.map": "/React-API-Project-TNJ/static/css/main.880a27b7.css.map",
+    "main.27420a3b.js.map": "/React-API-Project-TNJ/static/js/main.27420a3b.js.map",
+    "787.ff08f647.chunk.js.map": "/React-API-Project-TNJ/static/js/787.ff08f647.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.880a27b7.css",
+    "static/js/main.27420a3b.js"
+  ]
+}
